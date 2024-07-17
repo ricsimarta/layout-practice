@@ -6,74 +6,67 @@
 }
 
 header {
-  border: 10px solid red;
+  height: 40px;
 
-  min-height: 80px;
+  border: 2px solid gray;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px;
+}
 
-  padding-right: 20px;
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  border: 10px solid green;
-  
-  height: calc(100vh - 160px);
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
 }
 
-div.content {
-  width: 600px;
-  max-width: calc(100vw - 20px);
+div.left {
+  border: 2px solid red;
 
-  height: 350px;
-  max-height: calc(100vh - 180px);
+  min-height: calc(100vh - 40px);
+  /* min-height: 100%; */ /*<--- nem ugyanaz, mint a vh (viewport height), mert a % a szülő elem méretéből indul ki */
 
-  border: 10px solid pink;
+  width: 30vw;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
 }
 
-div.image {
-  width: 100px;
-  height: 50px;
-
-  border: 5px solid black;
+div.left button {
+  background-color: transparent;
+  padding: 5px;
+  border: 0;
+  text-align: left;
 }
 
-div.circle-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-
-  max-width: 330px;
+div.left button:hover {
+  cursor: pointer;
+  background-color: gray;
 }
 
-input {
-  width: 200px;
-}
-
-div.circle {
-  width: 50px;
-  height: 50px;
-
-  border: 3px solid purple;
-
-  border-radius: 50%;
-}
-
-footer {
-  border: 10px solid blue;
+div.center {
+  border: 2px solid blue;
   
-  height: 80px;
+  min-height: calc(100vh - 40px);
+
+  width: 40vw;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+div.right {
+  border: 2px solid yellow;
+  
+  min-height: calc(100vh - 40px);
+
+  width: 30vw;
 }
